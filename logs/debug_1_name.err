@@ -1,0 +1,68 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_3_frozen_lake': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-08 10:00:22,178	INFO worker.py:1888 -- Started a local Ray instance.
+[36m(TaskRunner pid=3952836)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=3952836)[0m WARNING:2025-06-08 10:00:30,828:Waiting for register center actor qP1PMe_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(WorkerDict pid=3953405)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=3953405)[0m [rank0]:[W608 10:00:37.530292136 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=3953405)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=3953405)[0m   warnings.warn(
+[36m(WorkerDict pid=3953405)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=3953405)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=3953405)[0m   warnings.warn(
+[36m(WorkerDict pid=3953405)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=3953405)[0m   warnings.warn(
+[36m(TaskRunner pid=3952836)[0m wandb: Currently logged in as: addalooptoit (addalooptoit-me) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+[36m(TaskRunner pid=3952836)[0m wandb: Tracking run with wandb version 0.19.11
+[36m(TaskRunner pid=3952836)[0m wandb: Run data is saved locally in /scr/jwiseman/RAGEN/wandb/run-20250608_100051-hwgnv683
+[36m(TaskRunner pid=3952836)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(TaskRunner pid=3952836)[0m wandb: Syncing run debug_1_name
+[36m(TaskRunner pid=3952836)[0m wandb: ⭐️ View project at https://wandb.ai/addalooptoit-me/ragen_latest
+[36m(TaskRunner pid=3952836)[0m wandb: 🚀 View run at https://wandb.ai/addalooptoit-me/ragen_latest/runs/hwgnv683
+[36m(WorkerDict pid=3953405)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=3953405)[0m   warnings.warn(
+[36m(WorkerDict pid=3953405)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:711: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=3953405)[0m   warnings.warn(
+[36m(TaskRunner pid=3952836)[0m Training Progress:   0%|          | 0/200 [00:00<?, ?it/s]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   0%|          | 1/200 [00:50<2:48:07, 50.69s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   1%|          | 2/200 [01:39<2:43:56, 49.68s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   2%|▏         | 3/200 [02:28<2:42:01, 49.35s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   2%|▏         | 4/200 [03:17<2:40:20, 49.09s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   2%|▎         | 5/200 [04:05<2:38:00, 48.62s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   3%|▎         | 6/200 [04:53<2:36:38, 48.44s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   4%|▎         | 7/200 [05:40<2:35:02, 48.20s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   4%|▍         | 8/200 [06:28<2:33:34, 47.99s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   4%|▍         | 9/200 [07:15<2:31:47, 47.68s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   5%|▌         | 10/200 [08:11<2:39:25, 50.35s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   6%|▌         | 11/200 [08:58<2:35:20, 49.31s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   6%|▌         | 12/200 [09:42<2:29:00, 47.55s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   6%|▋         | 13/200 [10:30<2:28:29, 47.65s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   7%|▋         | 14/200 [11:17<2:27:28, 47.57s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   8%|▊         | 15/200 [12:00<2:22:46, 46.31s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   8%|▊         | 16/200 [12:43<2:19:00, 45.33s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   8%|▊         | 17/200 [13:31<2:20:10, 45.96s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:   9%|▉         | 18/200 [14:18<2:20:35, 46.35s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  10%|▉         | 19/200 [15:06<2:21:27, 46.89s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  10%|█         | 20/200 [15:58<2:25:02, 48.35s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  10%|█         | 21/200 [16:43<2:21:31, 47.44s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  11%|█         | 22/200 [17:27<2:17:01, 46.19s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  12%|█▏        | 23/200 [18:13<2:16:45, 46.36s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  12%|█▏        | 24/200 [18:57<2:13:31, 45.52s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  12%|█▎        | 25/200 [19:44<2:14:15, 46.03s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  13%|█▎        | 26/200 [20:30<2:13:31, 46.04s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  14%|█▎        | 27/200 [21:16<2:12:41, 46.02s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  14%|█▍        | 28/200 [22:04<2:13:32, 46.58s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  14%|█▍        | 29/200 [22:50<2:12:16, 46.41s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  15%|█▌        | 30/200 [23:41<2:15:27, 47.81s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  16%|█▌        | 31/200 [24:24<2:10:42, 46.40s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  16%|█▌        | 32/200 [25:08<2:07:48, 45.65s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  16%|█▋        | 33/200 [25:56<2:08:33, 46.19s/it]
+[36m(TaskRunner pid=3952836)[0m Training Progress:  17%|█▋        | 34/200 [26:44<2:09:25, 46.78s/it]
+*** SIGTERM received at time=1749396485 on cpu 58 ***
+PC: @     0x7f8339d6b117  (unknown)  (unknown)
+    @     0x7f8339d1c520  (unknown)  (unknown)
+    @ ... and at least 1 more frames
+[2025-06-08 10:28:05,970 E 3943044 3943044] logging.cc:496: *** SIGTERM received at time=1749396485 on cpu 58 ***
+[2025-06-08 10:28:05,970 E 3943044 3943044] logging.cc:496: PC: @     0x7f8339d6b117  (unknown)  (unknown)
+[2025-06-08 10:28:05,970 E 3943044 3943044] logging.cc:496:     @     0x7f8339d1c520  (unknown)  (unknown)
+[2025-06-08 10:28:05,970 E 3943044 3943044] logging.cc:496:     @ ... and at least 1 more frames

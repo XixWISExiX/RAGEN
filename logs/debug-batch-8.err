@@ -1,0 +1,206 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_3_frozen_lake': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-10 08:26:13,286	INFO worker.py:1888 -- Started a local Ray instance.
+[36m(TaskRunner pid=1264912)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1264912)[0m WARNING:2025-06-10 08:26:23,285:Waiting for register center actor JMCxzB_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(WorkerDict pid=1266991)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForTokenClassification is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1266991)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=1266991)[0m Some weights of Qwen2ForTokenClassification were not initialized from the model checkpoint at Qwen/Qwen2.5-0.5B-Instruct and are newly initialized: ['score.bias', 'score.weight']
+[36m(WorkerDict pid=1266991)[0m You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(WorkerDict pid=1266991)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(TaskRunner pid=1264912)[0m wandb: Currently logged in as: addalooptoit (addalooptoit-me) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+[36m(TaskRunner pid=1264912)[0m wandb: Tracking run with wandb version 0.19.11
+[36m(TaskRunner pid=1264912)[0m wandb: Run data is saved locally in /scr/jwiseman/RAGEN/wandb/run-20250610_082647-e2irinwg
+[36m(TaskRunner pid=1264912)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(TaskRunner pid=1264912)[0m wandb: Syncing run debug-batch-8
+[36m(TaskRunner pid=1264912)[0m wandb: ⭐️ View project at https://wandb.ai/addalooptoit-me/ragen_latest
+[36m(TaskRunner pid=1264912)[0m wandb: 🚀 View run at https://wandb.ai/addalooptoit-me/ragen_latest/runs/e2irinwg
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(WorkerDict pid=1266991)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:711: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=1266991)[0m   warnings.warn(
+[36m(TaskRunner pid=1264912)[0m Training Progress:   0%|          | 0/200 [00:00<?, ?it/s]
+Error executing job with overrides: ['system.CUDA_VISIBLE_DEVICES="0"', 'trainer.experiment_name=debug-batch-8', 'algorithm.adv_estimator=gae', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=1', 'micro_batch_size_per_gpu=1', 'ppo_mini_batch_size=8', 'actor_rollout_ref.rollout.max_model_len=2048', 'actor_rollout_ref.rollout.response_length=128', 'micro_batch_size_per_gpu=8']
+Traceback (most recent call last):
+  File "/scr/jwiseman/RAGEN/train.py", line 302, in <module>
+    main()
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 158, in main
+    run_ppo(config)
+  File "/scr/jwiseman/RAGEN/train.py", line 179, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 2822, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 930, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=1264912, ip=10.255.0.11, actor_id=7158c391830cd6051c783e5701000000, repr=<train.TaskRunner object at 0x7ffa4bd89310>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 298, in run
+    trainer.fit()
+  File "/scr/jwiseman/RAGEN/ragen/trainer/agent_trainer.py", line 654, in fit
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 49, in func
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=1266991, ip=10.255.0.11, actor_id=d9b3a8cd56f5e4b2bb517c0b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f0d4935f1d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 561, in update_actor
+    metrics = self.actor.update_policy(data=data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/utils/debug/performance.py", line 78, in f
+    return self.log(decorated_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/utils/debug/performance.py", line 88, in log
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/actor/dp_actor.py", line 360, in update_policy
+    loss.backward()
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.53 GiB. GPU 0 has a total capacity of 44.52 GiB of which 4.61 GiB is free. Including non-PyTorch memory, this process has 39.89 GiB memory in use. Of the allocated memory 47.86 GiB is allocated by PyTorch, with 78.71 MiB allocated in private pools (e.g., CUDA Graphs), and 2.83 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(TaskRunner pid=1264912)[0m wandb:                                                                                
+[36m(TaskRunner pid=1264912)[0m wandb: 
+[36m(TaskRunner pid=1264912)[0m wandb: Run history:
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/best@128/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@128/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@16/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@16/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@2/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@2/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@32/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@32/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@4/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@4/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@64/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@64/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@8/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@8/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:                  val-aux/unknown/reward/std@256 ▁
+[36m(TaskRunner pid=1264912)[0m wandb:           val-aux/unknown/reward/worst@128/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@128/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@16/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@16/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@2/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@2/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:           val-aux/unknown/reward/worst@256/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@32/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@32/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@4/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@4/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@64/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@64/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@8/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@8/std ▁
+[36m(TaskRunner pid=1264912)[0m wandb:           val-core/unknown/reward/best@256/mean ▁
+[36m(TaskRunner pid=1264912)[0m wandb:                val-core/unknown/reward/mean@256 ▁
+[36m(TaskRunner pid=1264912)[0m wandb:          val-env/FrozenLake/action_is_effective ▁
+[36m(TaskRunner pid=1264912)[0m wandb:              val-env/FrozenLake/action_is_valid ▁
+[36m(TaskRunner pid=1264912)[0m wandb: val-env/FrozenLake/non-zero/action_is_effective ▁
+[36m(TaskRunner pid=1264912)[0m wandb:     val-env/FrozenLake/non-zero/action_is_valid ▁
+[36m(TaskRunner pid=1264912)[0m wandb:         val-env/FrozenLake/non-zero/num_actions ▁
+[36m(TaskRunner pid=1264912)[0m wandb:             val-env/FrozenLake/non-zero/success ▁
+[36m(TaskRunner pid=1264912)[0m wandb:                  val-env/FrozenLake/num_actions ▁
+[36m(TaskRunner pid=1264912)[0m wandb:                      val-env/FrozenLake/success ▁
+[36m(TaskRunner pid=1264912)[0m wandb:                         val-env/response_length ▁
+[36m(TaskRunner pid=1264912)[0m wandb: 
+[36m(TaskRunner pid=1264912)[0m wandb: Run summary:
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/best@128/mean 0.9926
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@128/std 0.07865
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@16/mean 0.448
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@16/std 0.52394
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@2/mean -0.2483
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@2/std 0.41051
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@32/mean 0.7048
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@32/std 0.44875
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@4/mean -0.0526
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@4/std 0.50271
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/best@64/mean 0.9171
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@64/std 0.26343
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/best@8/mean 0.1885
+[36m(TaskRunner pid=1264912)[0m wandb:               val-aux/unknown/reward/best@8/std 0.54472
+[36m(TaskRunner pid=1264912)[0m wandb:                  val-aux/unknown/reward/std@256 0.31476
+[36m(TaskRunner pid=1264912)[0m wandb:           val-aux/unknown/reward/worst@128/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@128/std 0
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@16/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@16/std 0
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@2/mean -0.4809
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@2/std 0.09168
+[36m(TaskRunner pid=1264912)[0m wandb:           val-aux/unknown/reward/worst@256/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@32/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@32/std 0
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@4/mean -0.4991
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@4/std 0.00944
+[36m(TaskRunner pid=1264912)[0m wandb:            val-aux/unknown/reward/worst@64/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@64/std 0
+[36m(TaskRunner pid=1264912)[0m wandb:             val-aux/unknown/reward/worst@8/mean -0.5
+[36m(TaskRunner pid=1264912)[0m wandb:              val-aux/unknown/reward/worst@8/std 0
+[36m(TaskRunner pid=1264912)[0m wandb:           val-core/unknown/reward/best@256/mean 1
+[36m(TaskRunner pid=1264912)[0m wandb:                val-core/unknown/reward/mean@256 -0.36953
+[36m(TaskRunner pid=1264912)[0m wandb:          val-env/FrozenLake/action_is_effective 0.15729
+[36m(TaskRunner pid=1264912)[0m wandb:              val-env/FrozenLake/action_is_valid 0.18079
+[36m(TaskRunner pid=1264912)[0m wandb: val-env/FrozenLake/non-zero/action_is_effective 0.64946
+[36m(TaskRunner pid=1264912)[0m wandb:     val-env/FrozenLake/non-zero/action_is_valid 0.65188
+[36m(TaskRunner pid=1264912)[0m wandb:         val-env/FrozenLake/non-zero/num_actions 3.46479
+[36m(TaskRunner pid=1264912)[0m wandb:             val-env/FrozenLake/non-zero/success 1
+[36m(TaskRunner pid=1264912)[0m wandb:                  val-env/FrozenLake/num_actions 0.96094
+[36m(TaskRunner pid=1264912)[0m wandb:                      val-env/FrozenLake/success 0.03906
+[36m(TaskRunner pid=1264912)[0m wandb:                         val-env/response_length 100.21484
+[36m(TaskRunner pid=1264912)[0m wandb: 
+[36m(TaskRunner pid=1264912)[0m wandb: 🚀 View run debug-batch-8 at: https://wandb.ai/addalooptoit-me/ragen_latest/runs/e2irinwg
+[36m(TaskRunner pid=1264912)[0m wandb: ⭐️ View project at: https://wandb.ai/addalooptoit-me/ragen_latest
+[36m(TaskRunner pid=1264912)[0m wandb: Synced 5 W&B file(s), 1 media file(s), 2 artifact file(s) and 0 other file(s)
+[36m(TaskRunner pid=1264912)[0m wandb: Find logs at: ./wandb/run-20250610_082647-e2irinwg/logs
+[36m(TaskRunner pid=1264912)[0m Training Progress:   0%|          | 0/200 [00:25<?, ?it/s]
