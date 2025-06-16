@@ -1,14 +1,14 @@
-defaults:
+defaults: # Call this config file before running the rest of this config file.
   - base
 
 trainer:
-  experiment_name: frozenlake-main
+  experiment_name: frozenlake-main # The name of the experiment that shows up in wandb
 
 
-es_manager:
+es_manager: # Eniveronment suite manager
   train:
     env_configs:
-      tags: ["FrozenLake"]
+      tags: ["FrozenLake"] # During training, the environment sampler should only pull the frozen lake environment.
   val:
     env_configs:
-      tags: ["FrozenLake"]
+      tags: ["FrozenLake"] # During the validation the environment sampler should only pull the frozen lake environment.

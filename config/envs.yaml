@@ -79,11 +79,11 @@ custom_envs:
       hi_arm_name: "Librarian"
 
   FrozenLake:
-    env_type: frozen_lake
-    max_actions_per_traj: 10
-    env_instruction: "You are solving the FrozenLake puzzle. Forbid the whole and go to the target. You may move to the unintended direction due to the slippery ice. Example answer format: <think>To forbid the hole and go to the target, I should go left then go up.</think><answer>Left || Up</answer>"
-    max_tokens: 100
-    env_config: null
+    env_type: frozen_lake # Tells what framework which gym-style wrapper to instantiate.
+    max_actions_per_traj: 10 # Hard cap on action sequence length per episode.
+    env_instruction: "You are solving the FrozenLake puzzle. Forbid the whole and go to the target. You may move to the unintended direction due to the slippery ice. Example answer format: <think>To forbid the hole and go to the target, I should go left then go up.</think><answer>Left || Up</answer>" # System prompt prepended to every rollout & explains the game.
+    max_tokens: 100 # Upper bound on total token budget for the prompt + model response.
+    env_config: null # Controls for environment-specific hyper-parameters.
 
   MetamathQA:
     env_type: metamathqa
