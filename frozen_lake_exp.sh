@@ -38,11 +38,15 @@ USE_LLAMA2_8B="model_path=meta-llama/Meta-Llama-3-8B-Instruct enable_response_ma
 USE_LLAMA2_70B="model_path=meta-llama/Llama-2-70b enable_response_mask=False"
 USE_QWEN_3B="model_path=Qwen/Qwen2.5-3B-Instruct actor_rollout_ref.rollout.gpu_memory_utilization=0.75"
 USE_QWEN_7B="model_path=Qwen/Qwen2.5-7B-Instruct actor_rollout_ref.rollout.gpu_memory_utilization=0.75"
-USE_QWEN_72B="model_path=Qwen/Qwen2.5-72B-Instruct"
+USE_QWEN_72B="model_path=Qwen/Qwen2.5-72B-Instruct actor_rollout_ref.rollout.gpu_memory_utilization=0.75"
 
 # LoRA (Efficient Training with Low-Rank Adaptation)
+LoRA_1_4_ALL="lora.rank=1 lora.alpha=4 lora.target_modules=all-linear"
+LoRA_8_32_ALL="lora.rank=8 lora.alpha=32 lora.target_modules=all-linear"
+LoRA_16_32_ALL="lora.rank=16 lora.alpha=32 lora.target_modules=all-linear"
 LoRA_32_32_ALL="lora.rank=32 lora.alpha=32 lora.target_modules=all-linear"
-#LoRA_32_32_ATTENTION="lora.rank=32 lora.alpha=32 lora.target_modules=[q_proj,k_proj,v_proj,o_proj]"
+LoRA_32_128_ALL="lora.rank=32 lora.alpha=128 lora.target_modules=all-linear"
+LoRA_32_32_ATTENTION="lora.rank=32 lora.alpha=32 lora.target_modules=[q_proj,k_proj,v_proj,o_proj]"
 
 #---------------------- OUNLP -----------------------
 
@@ -70,27 +74,57 @@ LoRA_32_32_ALL="lora.rank=32 lora.alpha=32 lora.target_modules=all-linear"
 
 # NEW TEST =====================================================
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-1-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"1"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=1 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#debug_name="QWEN_3B-2GPU-ppo-basic-medium-LoRA-32-32-all-batch_size_mini"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL $USE_PPO_MINI_BATCH $USE_QWEN_3B $USE_2_GPU_MODEL > logs/$debug_name.out 2> logs/$debug_name.err &
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-2-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"2"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=2 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+# NOTE one
+#debug_name="QWEN_3B-4GPU-ppo-basic-medium-LoRA-32-32-all-batch_size_mini"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL $USE_PPO_MINI_BATCH $USE_QWEN_3B $USE_4_GPU_MODEL > logs/$debug_name.out 2> logs/$debug_name.err &
+# actor_rollout_ref.rollout.engine_kwargs.swap_space=200
+# ray_init.num_cpus=64
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-4-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=4 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
 
-wait
+debug_name="QWEN_3B-4GPU-ppo-basic-medium-LoRA-32-128-all-batch_size_small-high_clip_symmetric"
+python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_128_ALL $USE_PPO_SMALL_BATCH $USE_QWEN_3B $USE_4_GPU_MODEL $USE_HIGH_CLIP_SYMMETRIC > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#wait
+#
+#debug_name="QWEN_3B-4GPU-ppo-basic-small-LoRA-32-32-all-batch_size_medium"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_SMALL $LoRA_32_32_ALL $USE_PPO_MEDIUM_BATCH $USE_QWEN_3B $USE_4_GPU_MODEL > logs/$debug_name.out 2> logs/$debug_name.err &
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-8-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"1"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=8 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-16-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"2"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=16 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+# NOTE: QWEN_72B doesn't work
+#debug_name="QWEN_72B-4GPU-grpo-basic-mini-LoRA-1-4-all-batch_size_mini"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_GRPO $USE_BASE $USE_MINI $LoRA_1_4_ALL $USE_PPO_MINI_BATCH $USE_QWEN_72B $USE_4_GPU_MODEL actor_rollout_ref.rollout.engine_kwargs.swap_space=250 ray_init.num_cpus=64 > logs/$debug_name.out 2> logs/$debug_name.err &
 
-debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-32-32"
-python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=32 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
 
-wait
+# NOTE: QWEN_7B doesn't work
+#debug_name="QWEN_7B-4GPU-ppo-basic-small-LoRA-8-32-all-batch_size_mini"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_SMALL $LoRA_8_32_ALL $USE_PPO_MINI_BATCH $USE_QWEN_7B $USE_4_GPU_MODEL > logs/$debug_name.out 2> logs/$debug_name.err &
+
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-1-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"1"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=1 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-2-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"2"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=2 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-4-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=4 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#wait
+#
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-8-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"1"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=8 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-16-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"2"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=16 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#debug_name="ppo-basic-medium-LoRA-32-32-all-batch_size-32-32"
+#python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL micro_batch_size_per_gpu=32 ppo_mini_batch_size=32 > logs/$debug_name.out 2> logs/$debug_name.err &
+#
+#wait
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #debug_name="ppo-basic-medium-batch_size_mini"
 #python train.py --config-name _3_frozen_lake trainer.project_name=frozen_lake system.CUDA_VISIBLE_DEVICES='"1"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $USE_PPO_MINI_BATCH > logs/$debug_name.out 2> logs/$debug_name.err &
