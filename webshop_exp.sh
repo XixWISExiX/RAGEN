@@ -1,5 +1,8 @@
 set -e
 
+# Trust Remote Code Setting
+TRUST_REMOTE="+actor_rollout_ref.model.trust_remote_code=True +critic.model.trust_remote_code=True"
+
 # Algorithm Settings
 USE_GRPO="algorithm.adv_estimator=grpo agent_proxy.reward_normalization.method=mean_std actor_rollout_ref.actor.use_kl_loss=True"
 USE_PPO="algorithm.adv_estimator=gae" # by default.
@@ -14,7 +17,6 @@ USE_MEDUIM_FILTER="algorithm.kl_ctrl.kl_coef=0.001 actor_rollout_ref.actor.kl_lo
 USE_NO_FILTER="algorithm.kl_ctrl.kl_coef=0.001 actor_rollout_ref.actor.kl_loss_coef=0.001 actor_rollout_ref.actor.clip_ratio_high=0.2 actor_rollout_ref.rollout.rollout_filter_ratio=0"
 USE_HIGH_CLIP_ASYMMETRIC="algorithm.kl_ctrl.kl_coef=0.01 actor_rollout_ref.actor.kl_loss_coef=0.01 actor_rollout_ref.actor.clip_ratio_high=0.4 actor_rollout_ref.actor.clip_ratio_low=0.2 actor_rollout_ref.rollout.rollout_filter_ratio=1"
 USE_LOW_CLIP_ASYMMETRIC="algorithm.kl_ctrl.kl_coef=0.01 actor_rollout_ref.actor.kl_loss_coef=0.01 actor_rollout_ref.actor.clip_ratio_high=0.2 actor_rollout_ref.actor.clip_ratio_low=0.4 actor_rollout_ref.rollout.rollout_filter_ratio=1"
-
 
 # Model Lengths
 USE_MINI="actor_rollout_ref.rollout.max_model_len=1024 actor_rollout_ref.rollout.response_length=128"
@@ -52,6 +54,7 @@ LoRA_32_32_ATTENTION="lora.rank=32 lora.alpha=32 lora.target_modules=[q_proj,k_p
 
 debug_name="webshop-QWEN_3B-4GPU-ppo-basic-medium-LoRA-32-32-all-batch_size_mini"
 python train.py --config-name _6_webshop.yaml trainer.project_name=webshop system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL $USE_PPO_MINI_BATCH $USE_QWEN_3B $USE_4_GPU_MODEL > logs/$debug_name.out 2> logs/$debug_name.err &
+#python train.py --config-name _6_webshop.yaml trainer.project_name=webshop system.CUDA_VISIBLE_DEVICES='"0,1,2,3"' trainer.experiment_name=$debug_name $USE_PPO $USE_BASE $USE_MEDIUM $LoRA_32_32_ALL $USE_PPO_MINI_BATCH $USE_QWEN_3B $USE_4_GPU_MODEL $TRUST_REMOTE > logs/$debug_name.out 2> logs/$debug_name.err &
 # actor_rollout_ref.rollout.engine_kwargs.swap_space=200
 # ray_init.num_cpus=64
 

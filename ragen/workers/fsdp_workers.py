@@ -60,6 +60,7 @@ from peft import LoraConfig, TaskType, get_peft_model
 import torch
 import torch.nn as nn
 from transformers.modeling_outputs import CausalLMOutput
+from transformers.modeling_outputs import TokenClassifierOutput
 
 class ValueModel(nn.Module):
     def __init__(self, base_model):
@@ -81,8 +82,14 @@ class ValueModel(nn.Module):
         # Apply value head: [batch, seq_len, 1] → [batch, seq_len]
         values = self.value_head(hidden_states).squeeze(-1)
 
-        return CausalLMOutput(logits=values)
+        #return CausalLMOutput(logits=values)
         #return values  # aligned with response_mask
+
+        return TokenClassifierOutput(
+            logits=values,
+            hidden_states=output.hidden_states,
+            attentions=output.attentions if hasattr(output, "attentions") else None
+        )
 
 # Add required HF methods
     def gradient_checkpointing_enable(self, **kwargs):
