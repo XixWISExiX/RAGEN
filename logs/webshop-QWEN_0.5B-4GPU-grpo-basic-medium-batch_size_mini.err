@@ -1,0 +1,258 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+WARNING: Using incubator modules: jdk.incubator.vector
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_6_webshop.yaml': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-29 17:23:05,195	INFO worker.py:1917 -- Started a local Ray instance.
+[33m(raylet)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+[33m(raylet)[0m   warnings.warn(
+[36m(pid=124324)[0m WARNING: Using incubator modules: jdk.incubator.vector
+[36m(TaskRunner pid=124324)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[33m(raylet)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+[33m(raylet)[0m   warnings.warn(
+[33m(raylet)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+[33m(raylet)[0m   warnings.warn(
+[36m(TaskRunner pid=124324)[0m WARNING:2025-06-29 17:23:16,264:Waiting for register center actor SmnO6C_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[33m(raylet)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).[32m [repeated 8x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[33m(raylet)[0m   warnings.warn([32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=125130)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[33m(raylet)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).[32m [repeated 3x across cluster][0m
+[33m(raylet)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=125130)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 33.00it/s]
+[36m(WorkerDict pid=124902)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[36m(WorkerDict pid=124902)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 34.43it/s]
+[36m(WorkerDict pid=124902)[0m [rank0]:[W629 17:23:26.967453354 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[36m(WorkerDict pid=124902)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=124902)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.10s/it]
+[36m(WorkerDict pid=125129)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=125129)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 33.47it/s][32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=125129)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=125129)[0m [rank1]:[W629 17:23:27.066008385 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=124902)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.28s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.40s/it]
+Error executing job with overrides: ['trainer.project_name=webshop', 'system.CUDA_VISIBLE_DEVICES="0,1,2,3"', 'trainer.experiment_name=webshop-QWEN_0.5B-4GPU-grpo-basic-medium-batch_size_mini', 'algorithm.adv_estimator=grpo', 'agent_proxy.reward_normalization.method=mean_std', 'actor_rollout_ref.actor.use_kl_loss=True', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=1', 'actor_rollout_ref.rollout.max_model_len=4096', 'actor_rollout_ref.rollout.response_length=256', 'micro_batch_size_per_gpu=1', 'ppo_mini_batch_size=4', 'trainer.n_gpus_per_node=4', 'actor_rollout_ref.rollout.tensor_model_parallel_size=4']
+Traceback (most recent call last):
+  File "/scr/jwiseman/RAGEN/train.py", line 158, in main
+    run_ppo(config)
+  File "/scr/jwiseman/RAGEN/train.py", line 179, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 2849, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 937, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ValueError): [36mray::TaskRunner.run()[39m (pid=124324, ip=10.255.0.11, actor_id=628c58d28240fe060828b34301000000, repr=<train.TaskRunner object at 0x7effb9515730>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 296, in run
+    trainer.init_workers()
+  File "/scr/jwiseman/RAGEN/ragen/trainer/agent_trainer.py", line 372, in init_workers
+    self.actor_rollout_wg.init_model()
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 49, in func
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(ValueError): [36mray::WorkerDict.actor_rollout_init_model()[39m (pid=125129, ip=10.255.0.11, actor_id=946f8250e546d1e3d28bb0b101000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f59a4de1700>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 582, in init_model
+    self.rollout, self.rollout_sharding_manager = self._build_rollout(trust_remote_code=self.config.model.get("trust_remote_code", False))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 443, in _build_rollout
+    rollout = vllm_rollout_cls(
+              ^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 127, in __init__
+    self.inference_engine = LLM(
+                            ^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/utils.py", line 1037, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 513, in from_engine_args
+    vllm_config = engine_args.create_engine_config(usage_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1296, in create_engine_config
+    model_config = self.create_model_config()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1141, in create_model_config
+    return ModelConfig(
+           ^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 399, in __init__
+    self.multimodal_config = self._init_multimodal_config(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 467, in _init_multimodal_config
+    if self.registry.is_multimodal_model(self.architectures):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 482, in is_multimodal_model
+    model_cls, _ = self.inspect_model_cls(architectures)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 442, in inspect_model_cls
+    return self._raise_for_unsupported(architectures)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 392, in _raise_for_unsupported
+    raise ValueError(
+ValueError: Model architectures ['Qwen2ForCausalLM'] failed to be inspected. Please check the logs for more details.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[36m(TaskRunner pid=124324)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.actor_rollout_init_model()[39m (pid=125130, ip=10.255.0.11, actor_id=fe71a4bca946124e586ec4b801000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f539e3f5d30>)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+[36m(TaskRunner pid=124324)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+[36m(TaskRunner pid=124324)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 582, in init_model
+[36m(TaskRunner pid=124324)[0m     self.rollout, self.rollout_sharding_manager = self._build_rollout(trust_remote_code=self.config.model.get("trust_remote_code", False))
+[36m(TaskRunner pid=124324)[0m                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 443, in _build_rollout
+[36m(TaskRunner pid=124324)[0m     rollout = vllm_rollout_cls(
+[36m(TaskRunner pid=124324)[0m               ^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 127, in __init__
+[36m(TaskRunner pid=124324)[0m     self.inference_engine = LLM(
+[36m(TaskRunner pid=124324)[0m                             ^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/utils.py", line 1037, in inner
+[36m(TaskRunner pid=124324)[0m     return fn(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
+[36m(TaskRunner pid=124324)[0m     self.llm_engine = LLMEngine.from_engine_args(
+[36m(TaskRunner pid=124324)[0m                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 513, in from_engine_args
+[36m(TaskRunner pid=124324)[0m     vllm_config = engine_args.create_engine_config(usage_context)
+[36m(TaskRunner pid=124324)[0m                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1296, in create_engine_config
+[36m(TaskRunner pid=124324)[0m     model_config = self.create_model_config()
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1141, in create_model_config
+[36m(TaskRunner pid=124324)[0m     return ModelConfig(
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 399, in __init__
+[36m(TaskRunner pid=124324)[0m     self.multimodal_config = self._init_multimodal_config(
+[36m(TaskRunner pid=124324)[0m                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 467, in _init_multimodal_config
+[36m(TaskRunner pid=124324)[0m     if self.registry.is_multimodal_model(self.architectures):
+[36m(TaskRunner pid=124324)[0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 482, in is_multimodal_model
+[36m(TaskRunner pid=124324)[0m     model_cls, _ = self.inspect_model_cls(architectures)
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 442, in inspect_model_cls
+[36m(TaskRunner pid=124324)[0m     return self._raise_for_unsupported(architectures)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 392, in _raise_for_unsupported
+[36m(TaskRunner pid=124324)[0m     raise ValueError(
+[36m(TaskRunner pid=124324)[0m ValueError: Model architectures ['Qwen2ForCausalLM'] failed to be inspected. Please check the logs for more details.
+[36m(TaskRunner pid=124324)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.actor_rollout_init_model()[39m (pid=124902, ip=10.255.0.11, actor_id=f0e95d96105e279b3b19dcbc01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f3b9c3794c0>)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+[36m(TaskRunner pid=124324)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+[36m(TaskRunner pid=124324)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 582, in init_model
+[36m(TaskRunner pid=124324)[0m     self.rollout, self.rollout_sharding_manager = self._build_rollout(trust_remote_code=self.config.model.get("trust_remote_code", False))
+[36m(TaskRunner pid=124324)[0m                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 443, in _build_rollout
+[36m(TaskRunner pid=124324)[0m     rollout = vllm_rollout_cls(
+[36m(TaskRunner pid=124324)[0m               ^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 127, in __init__
+[36m(TaskRunner pid=124324)[0m     self.inference_engine = LLM(
+[36m(TaskRunner pid=124324)[0m                             ^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/utils.py", line 1037, in inner
+[36m(TaskRunner pid=124324)[0m     return fn(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
+[36m(TaskRunner pid=124324)[0m     self.llm_engine = LLMEngine.from_engine_args(
+[36m(TaskRunner pid=124324)[0m                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 513, in from_engine_args
+[36m(TaskRunner pid=124324)[0m     vllm_config = engine_args.create_engine_config(usage_context)
+[36m(TaskRunner pid=124324)[0m                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1296, in create_engine_config
+[36m(TaskRunner pid=124324)[0m     model_config = self.create_model_config()
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1141, in create_model_config
+[36m(TaskRunner pid=124324)[0m     return ModelConfig(
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 399, in __init__
+[36m(TaskRunner pid=124324)[0m     self.multimodal_config = self._init_multimodal_config(
+[36m(TaskRunner pid=124324)[0m                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 467, in _init_multimodal_config
+[36m(TaskRunner pid=124324)[0m     if self.registry.is_multimodal_model(self.architectures):
+[36m(TaskRunner pid=124324)[0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 482, in is_multimodal_model
+[36m(TaskRunner pid=124324)[0m     model_cls, _ = self.inspect_model_cls(architectures)
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 442, in inspect_model_cls
+[36m(TaskRunner pid=124324)[0m     return self._raise_for_unsupported(architectures)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 392, in _raise_for_unsupported
+[36m(TaskRunner pid=124324)[0m     raise ValueError(
+[36m(TaskRunner pid=124324)[0m ValueError: Model architectures ['Qwen2ForCausalLM'] failed to be inspected. Please check the logs for more details.
+[36m(TaskRunner pid=124324)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.actor_rollout_init_model()[39m (pid=125131, ip=10.255.0.11, actor_id=38301e755bb7da160a486c4001000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f14f4e55850>)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+[36m(TaskRunner pid=124324)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+[36m(TaskRunner pid=124324)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 582, in init_model
+[36m(TaskRunner pid=124324)[0m     self.rollout, self.rollout_sharding_manager = self._build_rollout(trust_remote_code=self.config.model.get("trust_remote_code", False))
+[36m(TaskRunner pid=124324)[0m                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 443, in _build_rollout
+[36m(TaskRunner pid=124324)[0m     rollout = vllm_rollout_cls(
+[36m(TaskRunner pid=124324)[0m               ^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/scr/jwiseman/RAGEN/verl/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 127, in __init__
+[36m(TaskRunner pid=124324)[0m     self.inference_engine = LLM(
+[36m(TaskRunner pid=124324)[0m                             ^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/utils.py", line 1037, in inner
+[36m(TaskRunner pid=124324)[0m     return fn(*args, **kwargs)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 243, in __init__
+[36m(TaskRunner pid=124324)[0m     self.llm_engine = LLMEngine.from_engine_args(
+[36m(TaskRunner pid=124324)[0m                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 513, in from_engine_args
+[36m(TaskRunner pid=124324)[0m     vllm_config = engine_args.create_engine_config(usage_context)
+[36m(TaskRunner pid=124324)[0m                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1296, in create_engine_config
+[36m(TaskRunner pid=124324)[0m     model_config = self.create_model_config()
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 1141, in create_model_config
+[36m(TaskRunner pid=124324)[0m     return ModelConfig(
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 399, in __init__
+[36m(TaskRunner pid=124324)[0m     self.multimodal_config = self._init_multimodal_config(
+[36m(TaskRunner pid=124324)[0m                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/config.py", line 467, in _init_multimodal_config
+[36m(TaskRunner pid=124324)[0m     if self.registry.is_multimodal_model(self.architectures):
+[36m(TaskRunner pid=124324)[0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 482, in is_multimodal_model
+[36m(TaskRunner pid=124324)[0m     model_cls, _ = self.inspect_model_cls(architectures)
+[36m(TaskRunner pid=124324)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 442, in inspect_model_cls
+[36m(TaskRunner pid=124324)[0m     return self._raise_for_unsupported(architectures)
+[36m(TaskRunner pid=124324)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=124324)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/vllm/model_executor/models/registry.py", line 392, in _raise_for_unsupported
+[36m(TaskRunner pid=124324)[0m     raise ValueError(
+[36m(TaskRunner pid=124324)[0m ValueError: Model architectures ['Qwen2ForCausalLM'] failed to be inspected. Please check the logs for more details.
+[36m(WorkerDict pid=125130)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=125130)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.15s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=125129)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.45s/it][32m [repeated 3x across cluster][0m

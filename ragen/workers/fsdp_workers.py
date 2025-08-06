@@ -56,6 +56,70 @@ from verl.workers.sharding_manager.fsdp_ulysses import FSDPUlyssesShardingManage
 from verl.workers.fsdp_workers import create_device_mesh, get_sharding_strategy
 from peft import LoraConfig, TaskType, get_peft_model
 
+# NEW ADDITION TO SUPPORT lora #
+import torch
+import torch.nn as nn
+from transformers.modeling_outputs import CausalLMOutput
+from transformers.modeling_outputs import TokenClassifierOutput
+
+class ValueModel(nn.Module):
+    def __init__(self, base_model):
+        super().__init__()
+        self.base_model = base_model
+        self.value_head = nn.Linear(base_model.config.hidden_size, 1)
+
+    def forward(self, input_ids=None, attention_mask=None, **kwargs):
+        output = self.base_model(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            output_hidden_states=True,
+            return_dict=True,
+            **kwargs
+        )
+        # Get last hidden state: [batch, seq_len, hidden_dim]
+        hidden_states = output.hidden_states[-1]
+
+        # Apply value head: [batch, seq_len, 1] → [batch, seq_len]
+        values = self.value_head(hidden_states).squeeze(-1)
+
+        #return CausalLMOutput(logits=values)
+        #return values  # aligned with response_mask
+
+        return TokenClassifierOutput(
+            logits=values,
+            hidden_states=output.hidden_states,
+            attentions=output.attentions if hasattr(output, "attentions") else None
+        )
+
+# Add required HF methods
+    def gradient_checkpointing_enable(self, **kwargs):
+        return self.base_model.gradient_checkpointing_enable(**kwargs)
+
+    def gradient_checkpointing_disable(self):
+        return self.base_model.gradient_checkpointing_disable()
+
+    def enable_input_require_grads(self):
+        return self.base_model.enable_input_require_grads()
+
+    def get_input_embeddings(self):
+        return self.base_model.get_input_embeddings()
+
+    def resize_token_embeddings(self, new_num_tokens):
+        return self.base_model.resize_token_embeddings(new_num_tokens)
+
+    def __getattribute__(self, name):
+        # Allow normal attribute access first
+        try:
+            return super().__getattribute__(name)
+        except AttributeError as e:
+            if name == "base_model":
+                raise e  # avoid recursion if base_model is truly missing
+            # Fallback to base_model if it exists
+            base_model = super().__getattribute__("base_model")
+            return getattr(base_model, name)
+################################
+
+
 logger = logging.getLogger(__file__)
 logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
@@ -839,7 +903,8 @@ class CriticWorker(Worker):
         torch_dtype = self.config.model.fsdp_config.get("model_dtype", "fp32")
         torch_dtype = PrecisionType.to_dtype(torch_dtype)
 
-        from transformers import AutoConfig, AutoModelForTokenClassification
+        #from transformers import AutoConfig, AutoModelForTokenClassification
+        from transformers import AutoConfig, AutoModelForCausalLM
 
         trust_remote_code = False
         critic_model_config = AutoConfig.from_pretrained(local_path, trust_remote_code=trust_remote_code)
@@ -851,7 +916,8 @@ class CriticWorker(Worker):
             warnings.simplefilter("ignore")
             critic_model_config.classifier_dropout = 0.0
             critic_model_config.hidden_dropout = "0"
-            critic_module = AutoModelForTokenClassification.from_pretrained(
+            #critic_module = AutoModelForTokenClassification.from_pretrained(
+            critic_module = AutoModelForCausalLM.from_pretrained(
                 pretrained_model_name_or_path=local_path,
                 torch_dtype=torch_dtype,
                 config=critic_model_config,
@@ -883,6 +949,7 @@ class CriticWorker(Worker):
                 'bias': "none",
             }
             critic_module = get_peft_model(critic_module, LoraConfig(**lora_config))
+            critic_module = ValueModel(critic_module)
 
         if self.rank == 0:
             print_model_size(critic_module)
@@ -1153,13 +1220,15 @@ class RewardModelWorker(Worker):
         with init_context(), warnings.catch_warnings():
             warnings.simplefilter("ignore")
             model_config.classifier_dropout = 0.0
-            reward_module = AutoModelForTokenClassification.from_pretrained(
+            #reward_module = AutoModelForTokenClassification.from_pretrained(
+            reward_module = AutoModelForCausalLM.from_pretrained(
                 pretrained_model_name_or_path=local_path,
                 config=model_config,
                 torch_dtype=torch.bfloat16,
                 attn_implementation="flash_attention_2",
                 trust_remote_code=trust_remote_code,
             )
+            reward_module = ValueModel(reward_module)
 
             if config.model.get("use_remove_padding", False) or self.ulysses_sequence_parallel_size > 1:
                 from verl.models.transformers.monkey_patch import apply_monkey_patch

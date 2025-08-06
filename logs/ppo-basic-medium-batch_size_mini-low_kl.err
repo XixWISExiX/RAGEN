@@ -1,0 +1,489 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_3_frozen_lake': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-13 18:11:45,654	INFO worker.py:1888 -- Started a local Ray instance.
+[36m(TaskRunner pid=1022958)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1022958)[0m WARNING:2025-06-13 18:11:55,137:Waiting for register center actor tBd0TF_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(WorkerDict pid=1024668)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForTokenClassification is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1024668)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=1024668)[0m Some weights of Qwen2ForTokenClassification were not initialized from the model checkpoint at Qwen/Qwen2.5-0.5B-Instruct and are newly initialized: ['score.bias', 'score.weight']
+[36m(WorkerDict pid=1024668)[0m You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(WorkerDict pid=1024668)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py:444: UserWarning: FSDP is switching to use `NO_SHARD` instead of ShardingStrategy.FULL_SHARD since the world size is 1.
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(TaskRunner pid=1022958)[0m wandb: Currently logged in as: addalooptoit (ounlp) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+[36m(TaskRunner pid=1022958)[0m wandb: Tracking run with wandb version 0.19.11
+[36m(TaskRunner pid=1022958)[0m wandb: Run data is saved locally in /scr/jwiseman/RAGEN/wandb/run-20250613_181219-8wefp40n
+[36m(TaskRunner pid=1022958)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(TaskRunner pid=1022958)[0m wandb: Syncing run ppo-basic-medium-batch_size_mini-low_kl
+[36m(TaskRunner pid=1022958)[0m wandb: ⭐️ View project at https://wandb.ai/ounlp/frozen_lake
+[36m(TaskRunner pid=1022958)[0m wandb: 🚀 View run at https://wandb.ai/ounlp/frozen_lake/runs/8wefp40n
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:773: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(WorkerDict pid=1024668)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:711: UserWarning: When using ``NO_SHARD`` for ``ShardingStrategy``, full_state_dict willbe returned.
+[36m(WorkerDict pid=1024668)[0m   warnings.warn(
+[36m(TaskRunner pid=1022958)[0m Training Progress:   0%|          | 0/200 [00:00<?, ?it/s]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   0%|          | 1/200 [01:26<4:45:39, 86.13s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   1%|          | 2/200 [02:47<4:35:42, 83.55s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   2%|▏         | 3/200 [04:14<4:39:31, 85.13s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   2%|▏         | 4/200 [05:42<4:40:56, 86.00s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   2%|▎         | 5/200 [07:09<4:40:38, 86.35s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   3%|▎         | 6/200 [08:35<4:39:04, 86.31s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   4%|▎         | 7/200 [10:01<4:37:47, 86.36s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   4%|▍         | 8/200 [11:27<4:35:36, 86.13s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   4%|▍         | 9/200 [12:53<4:34:23, 86.20s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   5%|▌         | 10/200 [14:37<4:49:45, 91.50s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   6%|▌         | 11/200 [16:02<4:42:21, 89.64s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   6%|▌         | 12/200 [17:28<4:36:57, 88.39s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   6%|▋         | 13/200 [18:53<4:32:47, 87.53s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   7%|▋         | 14/200 [20:18<4:28:54, 86.75s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   8%|▊         | 15/200 [21:45<4:27:38, 86.80s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   8%|▊         | 16/200 [23:12<4:26:02, 86.76s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   8%|▊         | 17/200 [24:39<4:25:16, 86.98s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:   9%|▉         | 18/200 [26:07<4:24:08, 87.08s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  10%|▉         | 19/200 [27:33<4:22:27, 87.00s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  10%|█         | 20/200 [29:21<4:39:23, 93.13s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  10%|█         | 21/200 [30:48<4:32:25, 91.31s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  11%|█         | 22/200 [32:15<4:27:08, 90.05s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  12%|█▏        | 23/200 [33:41<4:22:29, 88.98s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  12%|█▏        | 24/200 [35:08<4:18:55, 88.27s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  12%|█▎        | 25/200 [36:35<4:15:58, 87.76s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  13%|█▎        | 26/200 [38:01<4:13:27, 87.40s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  14%|█▎        | 27/200 [39:28<4:11:10, 87.11s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  14%|█▍        | 28/200 [40:53<4:08:21, 86.64s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  14%|█▍        | 29/200 [42:19<4:05:51, 86.27s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  15%|█▌        | 30/200 [44:03<4:19:35, 91.62s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  16%|█▌        | 31/200 [45:28<4:12:55, 89.79s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  16%|█▌        | 32/200 [46:54<4:08:00, 88.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  16%|█▋        | 33/200 [48:20<4:04:07, 87.71s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  17%|█▋        | 34/200 [49:45<4:00:55, 87.08s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  18%|█▊        | 35/200 [51:10<3:57:55, 86.52s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  18%|█▊        | 36/200 [52:36<3:55:42, 86.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  18%|█▊        | 37/200 [54:01<3:53:16, 85.87s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  19%|█▉        | 38/200 [55:26<3:51:13, 85.64s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  20%|█▉        | 39/200 [56:52<3:49:59, 85.71s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  20%|██        | 40/200 [58:35<4:02:14, 90.84s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  20%|██        | 41/200 [1:00:00<3:56:12, 89.14s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  21%|██        | 42/200 [1:01:26<3:51:51, 88.05s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  22%|██▏       | 43/200 [1:02:52<3:48:50, 87.46s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  22%|██▏       | 44/200 [1:04:19<3:47:24, 87.47s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  22%|██▎       | 45/200 [1:05:46<3:45:45, 87.39s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  23%|██▎       | 46/200 [1:07:14<3:44:53, 87.62s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  24%|██▎       | 47/200 [1:08:42<3:43:22, 87.60s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  24%|██▍       | 48/200 [1:10:10<3:42:04, 87.66s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  24%|██▍       | 49/200 [1:11:39<3:41:23, 87.97s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  25%|██▌       | 50/200 [1:13:33<4:00:04, 96.03s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  26%|██▌       | 51/200 [1:15:03<3:53:31, 94.03s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  26%|██▌       | 52/200 [1:16:31<3:47:38, 92.29s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  26%|██▋       | 53/200 [1:17:58<3:42:21, 90.76s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  27%|██▋       | 54/200 [1:19:26<3:38:47, 89.92s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  28%|██▊       | 55/200 [1:20:54<3:35:32, 89.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  28%|██▊       | 56/200 [1:22:22<3:33:23, 88.91s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  28%|██▊       | 57/200 [1:23:50<3:31:03, 88.55s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  29%|██▉       | 58/200 [1:25:16<3:28:23, 88.06s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  30%|██▉       | 59/200 [1:26:44<3:26:31, 87.88s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  30%|███       | 60/200 [1:28:33<3:39:54, 94.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  30%|███       | 61/200 [1:30:00<3:33:30, 92.16s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  31%|███       | 62/200 [1:31:27<3:28:14, 90.54s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  32%|███▏      | 63/200 [1:32:55<3:24:58, 89.77s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  32%|███▏      | 64/200 [1:34:22<3:21:48, 89.04s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  32%|███▎      | 65/200 [1:35:50<3:19:30, 88.67s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  33%|███▎      | 66/200 [1:37:18<3:17:16, 88.33s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  34%|███▎      | 67/200 [1:38:45<3:15:24, 88.16s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  34%|███▍      | 68/200 [1:40:14<3:14:01, 88.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  34%|███▍      | 69/200 [1:41:42<3:12:52, 88.34s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  35%|███▌      | 70/200 [1:43:41<3:30:44, 97.27s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  36%|███▌      | 71/200 [1:45:09<3:23:38, 94.72s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  36%|███▌      | 72/200 [1:46:37<3:17:53, 92.76s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  36%|███▋      | 73/200 [1:48:04<3:12:37, 91.01s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  37%|███▋      | 74/200 [1:49:32<3:08:41, 89.85s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  38%|███▊      | 75/200 [1:51:00<3:06:02, 89.30s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  38%|███▊      | 76/200 [1:52:29<3:04:36, 89.32s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  38%|███▊      | 77/200 [1:53:58<3:02:58, 89.26s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  39%|███▉      | 78/200 [1:55:28<3:01:49, 89.42s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  40%|███▉      | 79/200 [1:56:58<3:00:49, 89.66s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  40%|████      | 80/200 [1:58:59<3:17:59, 99.00s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  40%|████      | 81/200 [2:00:29<3:10:48, 96.20s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  41%|████      | 82/200 [2:01:58<3:05:30, 94.33s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  42%|████▏     | 83/200 [2:03:29<3:01:49, 93.25s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  42%|████▏     | 84/200 [2:05:01<2:59:12, 92.70s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  42%|████▎     | 85/200 [2:06:31<2:56:25, 92.04s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  43%|████▎     | 86/200 [2:08:02<2:54:00, 91.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  44%|████▎     | 87/200 [2:09:32<2:51:56, 91.30s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  44%|████▍     | 88/200 [2:11:04<2:50:41, 91.44s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  44%|████▍     | 89/200 [2:12:36<2:49:11, 91.46s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  45%|████▌     | 90/200 [2:14:39<3:05:17, 101.07s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  46%|████▌     | 91/200 [2:16:10<2:58:17, 98.14s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  46%|████▌     | 92/200 [2:17:42<2:53:08, 96.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  46%|████▋     | 93/200 [2:19:12<2:48:03, 94.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  47%|████▋     | 94/200 [2:20:43<2:44:50, 93.31s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  48%|████▊     | 95/200 [2:22:15<2:42:34, 92.90s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  48%|████▊     | 96/200 [2:23:47<2:40:28, 92.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  48%|████▊     | 97/200 [2:25:18<2:38:03, 92.07s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  49%|████▉     | 98/200 [2:26:49<2:36:08, 91.84s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  50%|████▉     | 99/200 [2:28:21<2:34:34, 91.82s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  50%|█████     | 100/200 [2:30:29<2:51:04, 102.65s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  50%|█████     | 101/200 [2:31:58<2:43:00, 98.80s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  51%|█████     | 102/200 [2:33:30<2:37:50, 96.64s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  52%|█████▏    | 103/200 [2:35:02<2:33:57, 95.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  52%|█████▏    | 104/200 [2:36:31<2:29:29, 93.43s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  52%|█████▎    | 105/200 [2:38:03<2:27:26, 93.12s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  53%|█████▎    | 106/200 [2:39:35<2:25:10, 92.67s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  54%|█████▎    | 107/200 [2:41:07<2:23:29, 92.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  54%|█████▍    | 108/200 [2:42:39<2:21:16, 92.14s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  55%|█████▍    | 109/200 [2:44:11<2:19:45, 92.15s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  55%|█████▌    | 110/200 [2:46:18<2:34:04, 102.71s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  56%|█████▌    | 111/200 [2:47:51<2:27:51, 99.68s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  56%|█████▌    | 112/200 [2:49:22<2:22:35, 97.23s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  56%|█████▋    | 113/200 [2:50:54<2:18:47, 95.72s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  57%|█████▋    | 114/200 [2:52:24<2:14:42, 93.99s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  57%|█████▊    | 115/200 [2:53:56<2:12:01, 93.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  58%|█████▊    | 116/200 [2:55:28<2:10:11, 92.99s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  58%|█████▊    | 117/200 [2:57:01<2:08:34, 92.94s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  59%|█████▉    | 118/200 [2:58:33<2:06:44, 92.74s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  60%|█████▉    | 119/200 [3:00:06<2:05:10, 92.72s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  60%|██████    | 120/200 [3:02:14<2:17:52, 103.41s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  60%|██████    | 121/200 [3:03:47<2:11:43, 100.05s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  61%|██████    | 122/200 [3:05:19<2:07:15, 97.89s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  62%|██████▏   | 123/200 [3:06:52<2:03:38, 96.35s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  62%|██████▏   | 124/200 [3:08:24<2:00:24, 95.05s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  62%|██████▎   | 125/200 [3:09:57<1:57:56, 94.35s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  63%|██████▎   | 126/200 [3:11:29<1:55:28, 93.63s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  64%|██████▎   | 127/200 [3:13:01<1:53:30, 93.30s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  64%|██████▍   | 128/200 [3:14:33<1:51:19, 92.77s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  64%|██████▍   | 129/200 [3:16:06<1:49:47, 92.78s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  65%|██████▌   | 130/200 [3:18:13<2:00:13, 103.05s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  66%|██████▌   | 131/200 [3:19:45<1:54:38, 99.69s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  66%|██████▌   | 132/200 [3:21:17<1:50:23, 97.40s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  66%|██████▋   | 133/200 [3:22:48<1:46:46, 95.61s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  67%|██████▋   | 134/200 [3:24:20<1:44:04, 94.62s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  68%|██████▊   | 135/200 [3:25:51<1:41:13, 93.44s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  68%|██████▊   | 136/200 [3:27:23<1:39:07, 92.93s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  68%|██████▊   | 137/200 [3:28:55<1:37:25, 92.79s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  69%|██████▉   | 138/200 [3:30:28<1:35:45, 92.66s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  70%|██████▉   | 139/200 [3:32:00<1:34:02, 92.50s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  70%|███████   | 140/200 [3:34:08<1:43:13, 103.22s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  70%|███████   | 141/200 [3:35:40<1:38:14, 99.91s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  71%|███████   | 142/200 [3:37:13<1:34:36, 97.88s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  72%|███████▏  | 143/200 [3:38:46<1:31:33, 96.37s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  72%|███████▏  | 144/200 [3:40:18<1:28:37, 94.96s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  72%|███████▎  | 145/200 [3:41:50<1:26:24, 94.26s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  73%|███████▎  | 146/200 [3:43:23<1:24:27, 93.85s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  74%|███████▎  | 147/200 [3:44:56<1:22:39, 93.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  74%|███████▍  | 148/200 [3:46:29<1:20:46, 93.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  74%|███████▍  | 149/200 [3:48:01<1:19:01, 92.97s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  75%|███████▌  | 150/200 [3:50:08<1:25:58, 103.17s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  76%|███████▌  | 151/200 [3:51:42<1:21:57, 100.36s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  76%|███████▌  | 152/200 [3:53:14<1:18:21, 97.95s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  76%|███████▋  | 153/200 [3:54:46<1:15:23, 96.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  77%|███████▋  | 154/200 [3:56:19<1:12:57, 95.16s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  78%|███████▊  | 155/200 [3:57:50<1:10:24, 93.89s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  78%|███████▊  | 156/200 [3:59:22<1:08:32, 93.47s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  78%|███████▊  | 157/200 [4:00:55<1:06:47, 93.19s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  79%|███████▉  | 158/200 [4:02:28<1:05:08, 93.06s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  80%|███████▉  | 159/200 [4:04:00<1:03:29, 92.92s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  80%|████████  | 160/200 [4:06:09<1:09:03, 103.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  80%|████████  | 161/200 [4:07:41<1:05:07, 100.20s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  81%|████████  | 162/200 [4:09:13<1:01:58, 97.85s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  82%|████████▏ | 163/200 [4:10:46<59:17, 96.15s/it]  
+[36m(TaskRunner pid=1022958)[0m Training Progress:  82%|████████▏ | 164/200 [4:12:17<56:51, 94.77s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  82%|████████▎ | 165/200 [4:13:49<54:48, 93.95s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  83%|████████▎ | 166/200 [4:15:22<52:57, 93.45s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  84%|████████▎ | 167/200 [4:16:52<50:58, 92.69s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  84%|████████▍ | 168/200 [4:18:24<49:18, 92.45s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  84%|████████▍ | 169/200 [4:19:57<47:45, 92.42s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  85%|████████▌ | 170/200 [4:22:05<51:33, 103.11s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  86%|████████▌ | 171/200 [4:23:37<48:11, 99.72s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  86%|████████▌ | 172/200 [4:25:08<45:26, 97.37s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  86%|████████▋ | 173/200 [4:26:40<43:05, 95.77s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  87%|████████▋ | 174/200 [4:28:13<41:01, 94.67s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  88%|████████▊ | 175/200 [4:29:44<39:02, 93.70s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  88%|████████▊ | 176/200 [4:31:16<37:13, 93.07s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  88%|████████▊ | 177/200 [4:32:48<35:33, 92.76s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  89%|████████▉ | 178/200 [4:34:20<33:57, 92.60s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  90%|████████▉ | 179/200 [4:35:51<32:15, 92.16s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  90%|█████████ | 180/200 [4:37:59<34:16, 102.81s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  90%|█████████ | 181/200 [4:39:30<31:26, 99.30s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  91%|█████████ | 182/200 [4:41:02<29:09, 97.18s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  92%|█████████▏| 183/200 [4:42:34<27:06, 95.70s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  92%|█████████▏| 184/200 [4:44:06<25:12, 94.54s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  92%|█████████▎| 185/200 [4:45:38<23:27, 93.86s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  93%|█████████▎| 186/200 [4:47:10<21:46, 93.32s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  94%|█████████▎| 187/200 [4:48:41<20:00, 92.38s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  94%|█████████▍| 188/200 [4:50:13<18:27, 92.31s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  94%|█████████▍| 189/200 [4:51:44<16:52, 92.02s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  95%|█████████▌| 190/200 [4:53:50<17:02, 102.24s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  96%|█████████▌| 191/200 [4:55:21<14:50, 98.94s/it] 
+[36m(TaskRunner pid=1022958)[0m Training Progress:  96%|█████████▌| 192/200 [4:56:51<12:47, 95.99s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  96%|█████████▋| 193/200 [4:58:22<11:01, 94.54s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  97%|█████████▋| 194/200 [4:59:53<09:21, 93.51s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  98%|█████████▊| 195/200 [5:01:24<07:44, 92.91s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  98%|█████████▊| 196/200 [5:02:55<06:09, 92.30s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  98%|█████████▊| 197/200 [5:04:27<04:36, 92.17s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress:  99%|█████████▉| 198/200 [5:05:57<03:03, 91.58s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress: 100%|█████████▉| 199/200 [5:07:29<01:31, 91.51s/it]
+[36m(TaskRunner pid=1022958)[0m Training Progress: 100%|█████████▉| 199/200 [5:09:30<01:33, 93.32s/it]
+[36m(TaskRunner pid=1022958)[0m wandb: uploading artifact run-8wefp40n-valgenerations
+[36m(TaskRunner pid=1022958)[0m wandb:                                                                                
+[36m(TaskRunner pid=1022958)[0m wandb: 
+[36m(TaskRunner pid=1022958)[0m wandb: Run history:
+[36m(TaskRunner pid=1022958)[0m wandb:                              actor/entropy_loss █▆▆▅▆▆▅▃▂▂▂▂▂▂▂▂▁▁▁▂▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                 actor/grad_norm ▃▃▃▃▄▂▃▂▂▂▂▂▂▃▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▂▂▁▁▁▂▅█▃█▃
+[36m(TaskRunner pid=1022958)[0m wandb:                                        actor/lr ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                               actor/pg_clipfrac █▆▇▆▆▅▂▄▄▃▂▃▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▄▃▄▄▆▅▅▆▅█
+[36m(TaskRunner pid=1022958)[0m wandb:                         actor/pg_clipfrac_lower ▁▂▂▂▂█▃▆▅▆▅▅▂▅▄▂▆▂▂▂▁▁▁▂▁▂▂▁▁▂▁▁▂▄▅▂▃▂▂▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                   actor/pg_loss ▆▆▇█▇▁▂▄▁▄▄▄▅▃▃▂▃▄▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▄▃▃▃▃
+[36m(TaskRunner pid=1022958)[0m wandb:                                    actor/ppo_kl ▆▄█▅▆█▃▂▃▄▄▂▁▂▃▃▃▃▃▃▃▃▃▂▄▃▂▃▃▃▃▂▂▄▃▄▃▃▃▃
+[36m(TaskRunner pid=1022958)[0m wandb:                           critic/advantages/max ▃▃▄▂▁▂▂▂▂▂█▁▁▂▁▁▂▁▂▁▂▂▅▁▂▁▂▁▁▁▂▁▂▁▁▁▁▁▂▂
+[36m(TaskRunner pid=1022958)[0m wandb:                          critic/advantages/mean ██▆▅▅▁▅▅▅▄▅▄▄▅▅▆▇▆▆▆▆▆▆▆▆▇▇▇▆▆▇▇▇▇▇▆▆▆▆▇
+[36m(TaskRunner pid=1022958)[0m wandb:                           critic/advantages/min ██▅▅▄▃▂▁▃▂▂▂▃▁▃▃▃▂▂▂▃▃▂▃▄▂▂▃▃▃▃▃▄▄▃▄▃▂▄▄
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/grad_norm ▇█▄▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                       critic/lr ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/returns/max █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                             critic/returns/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/returns/min ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/rewards/max ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                             critic/rewards/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/rewards/min ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/score/max ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/score/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/score/min ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/values/max █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/values/mean ▄▁██▆▅▇▆▆▆▇▇▆▅▅▅▅▄▄▄▄▄▄▄▄▄▄▅▄▅▄▄▄▄▄▄▄▅▄▅
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/values/min ▁▆██▇▆▆█▇██▇▇▆▇▇██▇█▇▇▇▇▇▇▇██▇▇██▇▇▇▇▇█▇
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/vf_clipfrac █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                         critic/vf_explained_var █▆▄▃▄▁▁▄▃▃▁▃▁▂▂▂▄▁▂▂▂▂▂▃▃▃▃▃▃▃▃▃▃▃▃▂▃▂▃▃
+[36m(TaskRunner pid=1022958)[0m wandb:                                  critic/vf_loss █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/vpred_mean ▁▇██████████████████████████████████████
+[36m(TaskRunner pid=1022958)[0m wandb:                      global_seqlen/balanced_max ▂▁▁▁▂▂▁▂▁▁▃▃▃▅▄▃▄▅▃▄███████████████████▇
+[36m(TaskRunner pid=1022958)[0m wandb:                      global_seqlen/balanced_min ▂▁▃▂▃▃▂▂▂▂▄▅▄▅▆▇▇█▇█████████████████████
+[36m(TaskRunner pid=1022958)[0m wandb:                               global_seqlen/max ▁▃▂▂▃▃▃▃▃▃▂▂▄▅▄▄▅▅▆▇▇███████████████████
+[36m(TaskRunner pid=1022958)[0m wandb:                              global_seqlen/mean ▁▂▂▂▃▂▂▂▂▁▂▄▄▄▄▃▄▄▃▄▇███████████████▇█▇▇
+[36m(TaskRunner pid=1022958)[0m wandb:                               global_seqlen/min ▁▂▂▂▂▂▁▁▁▁▁▃▄▄▄▃▄▆▇▇████████████████▇███
+[36m(TaskRunner pid=1022958)[0m wandb:                       global_seqlen/minmax_diff ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                         perf/cpu_memory_used_gb █████▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇██▇▇▇▇▇▇██▄▄▄▄▄▄▄▄▁
+[36m(TaskRunner pid=1022958)[0m wandb:                    perf/max_memory_allocated_gb ▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▃▃▃▃▃██████████
+[36m(TaskRunner pid=1022958)[0m wandb:                     perf/max_memory_reserved_gb ▁▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇████████████
+[36m(TaskRunner pid=1022958)[0m wandb:                                  perf/mfu/actor ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                 perf/mfu/critic ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                 perf/throughput ▂▃▂▂▃▁▂▁▂▄▄▄▅▂▄▅▅▃▅▆▇█▇██▅█▅███████████▄
+[36m(TaskRunner pid=1022958)[0m wandb:                              perf/time_per_step ▁▂▂▂▆▂▂▂▂▂▂▂▂▂▂▂▂▂█▂▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
+[36m(TaskRunner pid=1022958)[0m wandb:                           perf/total_num_tokens ▂▁▂▂▃▂▂▂▁▁▃▃▄▃▅▆▆▇█▇███████████████████▆
+[36m(TaskRunner pid=1022958)[0m wandb:                        prompt_length/clip_ratio ▁▁▁▁▁▁▁▁▁▁▁▁▂▃█▃▁▁▁▄▁▁▄▆▁▁▃▁▁▆▁▁▁▁▁▁▁▁▁▂
+[36m(TaskRunner pid=1022958)[0m wandb:                               prompt_length/max ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                              prompt_length/mean ▁▁▁▁▁▁▁▁▃▃▂▁▃▂▃▁▃▃▁▄▆▁▁▁▁▁▃▁▆▃▁▁▁▁▁▁▁▁▁█
+[36m(TaskRunner pid=1022958)[0m wandb:                               prompt_length/min ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                      response_length/clip_ratio ▁▁▁▁▁▁▁▁▁▁▂▂▁▁▁▂▂▃▁▇▄▄▁▁▄█▁█▄█▁▁▁▁▁▄▁▁▁▃
+[36m(TaskRunner pid=1022958)[0m wandb:                             response_length/max ▁▄▃▃▄▂▄▂▃▄▃▃▃▄▄▄▃▄▃▃▄▅▇▃▄▄▄▄▄▅▅▄▃▆▅█▄▆▄▄
+[36m(TaskRunner pid=1022958)[0m wandb:                            response_length/mean ▂▁▁▂▁▁▁▁▁▃▄▅▅▃▄▇▇█▇▇███████████████████▇
+[36m(TaskRunner pid=1022958)[0m wandb:                             response_length/min ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▃▅▄▆▇▇█▇▇███▇█▅▇▆█▄▁▄▁
+[36m(TaskRunner pid=1022958)[0m wandb:                     rollout/chosen_in_group_max ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                    rollout/chosen_in_group_mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                     rollout/chosen_in_group_std ▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/in_group_max █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                           rollout/in_group_mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/in_group_std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/old_log_prob ▆▅▃▅▅▄▄▃▆▆▆▇▆█▇▇▇███████▇▇▇▇▇▇▇▇▇▇▆▃▃▂▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/ref_log_prob ▁▁▂▂▂▁▂▁▄▆▇▇▇▇▆▆▅▆▇▇▇▇██▇▇██████████████
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/adv ▇▇▄▆▆█▆▆▂▅▅▅▅▄▄▃▃▄▃▃▃▃▃▃▁▃▁▃▃▃▃▁▃▃▃▁▁▃▃▃
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/gen ▆▇▆▆▆▇██▇█▃▄▃▃▃▃▂▁▂▂▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/ref ▆█▇█▆▆█▅▅▄▄▄▅▄▃▅▄▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂
+[36m(TaskRunner pid=1022958)[0m wandb:                timing_per_token_ms/update_actor ▆▅▆▇▇▆▆▇▇█▅▄▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:               timing_per_token_ms/update_critic ▆▇▅▆▆███▄▅▃▄▄▄▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                      timing_per_token_ms/values ▆▇█▆▇▇█▄▅▄▅▅▃▄▄▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/adv ▇▅▆▇▆▁▆▆▁▆▆▆▇▁▆▄▆▆▁▆▆██▇▆▇▇▁▇▆▇▁█▇▆▇▁▆▇▆
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/gen ▁▂▂▂▁▁▄▃▃▂▃▃▄▇▆▇▇▇▇▇███▇▇▇█▇█▇▇█▇▇▇▇██▇▇
+[36m(TaskRunner pid=1022958)[0m wandb:                           timing_s/old_log_prob █▄▃▄▄▄▃▃▄▃▃▂▄▄▇▃▆▁▃▃▅▄▅▃▄▆▄▅▅▅▃▇▄▅▄▄▄▅▄▇
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/ref ▅▆▆▅▅▆▅▅▅▅▄▄▇▃▁▅▇▅▃▇▅▇▆▆▆▇▆▆▄▅▆▇█▆▅▇▆▅▆▆
+[36m(TaskRunner pid=1022958)[0m wandb:                                   timing_s/step ▁▂▂█▃▃▂▂▂█▃▃▃▃▃▄▄▄▄▄▄▄▅▄▄▄▅▅▄▄▄▅▅▄▄▄▄▄▄▄
+[36m(TaskRunner pid=1022958)[0m wandb:                                timing_s/testing ▁▂▂▁▅▃▆▆▇██████████▆
+[36m(TaskRunner pid=1022958)[0m wandb:                                  timing_s/total ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇█
+[36m(TaskRunner pid=1022958)[0m wandb:                           timing_s/update_actor ▄▅▅▅▅▅▅▅▅▄▅▅▆▆▇▃▅▅▄▆▇▅▆▆▁▆▅▆▆▇▅█▆▆▇▇▆▄▃▅
+[36m(TaskRunner pid=1022958)[0m wandb:                          timing_s/update_critic ▇▇▆▇▆▆▅▇█▆▇▄▆▇▇▇▇▅▇▇▅█▁▅▆▇▄▆▇▆▄▆▅▆▄▄▇▂▆▄
+[36m(TaskRunner pid=1022958)[0m wandb:                                 timing_s/values ▄▅▅▆▆▅▅▅▅▄▅▃▃▄█▂▄▃▃▃▂▃▃▃▁▅▆▇▄▅▆▅▇▅▂▆▄▅▄▆
+[36m(TaskRunner pid=1022958)[0m wandb:            train/FrozenLake/action_is_effective ▅█▁
+[36m(TaskRunner pid=1022958)[0m wandb:                train/FrozenLake/action_is_valid ▆█▁
+[36m(TaskRunner pid=1022958)[0m wandb:   train/FrozenLake/non-zero/action_is_effective ▆█▁
+[36m(TaskRunner pid=1022958)[0m wandb:       train/FrozenLake/non-zero/action_is_valid ▆█▁
+[36m(TaskRunner pid=1022958)[0m wandb:           train/FrozenLake/non-zero/num_actions █▇▁
+[36m(TaskRunner pid=1022958)[0m wandb:               train/FrozenLake/non-zero/success ▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                    train/FrozenLake/num_actions █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                        train/FrozenLake/success ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                           train/response_length ▂▁▁▁▂▁▁▃▃▄▃▄▃▇▇▇████████████████████████
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/best@128/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@128/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@16/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@16/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@2/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@2/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@32/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@32/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@4/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@4/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@64/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@64/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@8/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@8/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                  val-aux/unknown/reward/std@256 █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:           val-aux/unknown/reward/worst@128/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@128/std ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@16/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@16/std ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@2/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@2/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:           val-aux/unknown/reward/worst@256/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@32/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@32/std ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@4/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@4/std █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@64/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@64/std ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@8/mean ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@8/std ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:           val-core/unknown/reward/best@256/mean █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                val-core/unknown/reward/mean@256 █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:          val-env/FrozenLake/action_is_effective ▁
+[36m(TaskRunner pid=1022958)[0m wandb:              val-env/FrozenLake/action_is_valid ▁
+[36m(TaskRunner pid=1022958)[0m wandb: val-env/FrozenLake/non-zero/action_is_effective ▁
+[36m(TaskRunner pid=1022958)[0m wandb:     val-env/FrozenLake/non-zero/action_is_valid ▁
+[36m(TaskRunner pid=1022958)[0m wandb:         val-env/FrozenLake/non-zero/num_actions ▁
+[36m(TaskRunner pid=1022958)[0m wandb:             val-env/FrozenLake/non-zero/success ▁
+[36m(TaskRunner pid=1022958)[0m wandb:                  val-env/FrozenLake/num_actions █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                      val-env/FrozenLake/success █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+[36m(TaskRunner pid=1022958)[0m wandb:                         val-env/response_length ▁▂▃▂▂▅▄▆▇▇██████████▇
+[36m(TaskRunner pid=1022958)[0m wandb: 
+[36m(TaskRunner pid=1022958)[0m wandb: Run summary:
+[36m(TaskRunner pid=1022958)[0m wandb:                              actor/entropy_loss 0.14773
+[36m(TaskRunner pid=1022958)[0m wandb:                                 actor/grad_norm 16.12901
+[36m(TaskRunner pid=1022958)[0m wandb:                                        actor/lr 0.0
+[36m(TaskRunner pid=1022958)[0m wandb:                               actor/pg_clipfrac 0.10577
+[36m(TaskRunner pid=1022958)[0m wandb:                         actor/pg_clipfrac_lower 0.00477
+[36m(TaskRunner pid=1022958)[0m wandb:                                   actor/pg_loss 0.01103
+[36m(TaskRunner pid=1022958)[0m wandb:                                    actor/ppo_kl 0.01216
+[36m(TaskRunner pid=1022958)[0m wandb:                           critic/advantages/max 4.08428
+[36m(TaskRunner pid=1022958)[0m wandb:                          critic/advantages/mean -12.92293
+[36m(TaskRunner pid=1022958)[0m wandb:                           critic/advantages/min -38.96503
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/grad_norm 5.2147
+[36m(TaskRunner pid=1022958)[0m wandb:                                       critic/lr 1e-05
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/returns/max -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                             critic/returns/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/returns/min -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/rewards/max -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                             critic/rewards/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/rewards/min -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/score/max -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/score/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                                critic/score/min -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/values/max 0
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/values/mean -0.31641
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/values/min -0.52344
+[36m(TaskRunner pid=1022958)[0m wandb:                              critic/vf_clipfrac 0
+[36m(TaskRunner pid=1022958)[0m wandb:                         critic/vf_explained_var -4984.37744
+[36m(TaskRunner pid=1022958)[0m wandb:                                  critic/vf_loss 0.00028
+[36m(TaskRunner pid=1022958)[0m wandb:                               critic/vpred_mean -0.49826
+[36m(TaskRunner pid=1022958)[0m wandb:                      global_seqlen/balanced_max 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                      global_seqlen/balanced_min 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                               global_seqlen/max 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                              global_seqlen/mean 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                               global_seqlen/min 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                       global_seqlen/minmax_diff 0
+[36m(TaskRunner pid=1022958)[0m wandb:                         perf/cpu_memory_used_gb 403.13337
+[36m(TaskRunner pid=1022958)[0m wandb:                    perf/max_memory_allocated_gb 33.23879
+[36m(TaskRunner pid=1022958)[0m wandb:                     perf/max_memory_reserved_gb 38.78906
+[36m(TaskRunner pid=1022958)[0m wandb:                                  perf/mfu/actor 0
+[36m(TaskRunner pid=1022958)[0m wandb:                                 perf/mfu/critic 0
+[36m(TaskRunner pid=1022958)[0m wandb:                                 perf/throughput 1720.2182
+[36m(TaskRunner pid=1022958)[0m wandb:                              perf/time_per_step 121.54446
+[36m(TaskRunner pid=1022958)[0m wandb:                           perf/total_num_tokens 209083
+[36m(TaskRunner pid=1022958)[0m wandb:                        prompt_length/clip_ratio 0.00781
+[36m(TaskRunner pid=1022958)[0m wandb:                               prompt_length/max 1
+[36m(TaskRunner pid=1022958)[0m wandb:                              prompt_length/mean 0.00781
+[36m(TaskRunner pid=1022958)[0m wandb:                               prompt_length/min 0
+[36m(TaskRunner pid=1022958)[0m wandb:                      response_length/clip_ratio 0.00781
+[36m(TaskRunner pid=1022958)[0m wandb:                             response_length/max 1871
+[36m(TaskRunner pid=1022958)[0m wandb:                            response_length/mean 1633.45312
+[36m(TaskRunner pid=1022958)[0m wandb:                             response_length/min 817
+[36m(TaskRunner pid=1022958)[0m wandb:                     rollout/chosen_in_group_max -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                    rollout/chosen_in_group_mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                     rollout/chosen_in_group_std 0
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/in_group_max -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                           rollout/in_group_mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/in_group_std 0
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/old_log_prob -4.38072
+[36m(TaskRunner pid=1022958)[0m wandb:                            rollout/ref_log_prob -0.42168
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/adv 0.00023
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/gen 0.08861
+[36m(TaskRunner pid=1022958)[0m wandb:                         timing_per_token_ms/ref 0.03944
+[36m(TaskRunner pid=1022958)[0m wandb:                timing_per_token_ms/update_actor 0.14931
+[36m(TaskRunner pid=1022958)[0m wandb:               timing_per_token_ms/update_critic 0.09709
+[36m(TaskRunner pid=1022958)[0m wandb:                      timing_per_token_ms/values 0.02016
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/adv 0.04872
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/gen 18.5277
+[36m(TaskRunner pid=1022958)[0m wandb:                           timing_s/old_log_prob 8.33564
+[36m(TaskRunner pid=1022958)[0m wandb:                                    timing_s/ref 8.24618
+[36m(TaskRunner pid=1022958)[0m wandb:                                   timing_s/step 121.54446
+[36m(TaskRunner pid=1022958)[0m wandb:                                timing_s/testing 30.64865
+[36m(TaskRunner pid=1022958)[0m wandb:                                  timing_s/total 18570.63613
+[36m(TaskRunner pid=1022958)[0m wandb:                           timing_s/update_actor 31.21913
+[36m(TaskRunner pid=1022958)[0m wandb:                          timing_s/update_critic 20.29944
+[36m(TaskRunner pid=1022958)[0m wandb:                                 timing_s/values 4.21484
+[36m(TaskRunner pid=1022958)[0m wandb:            train/FrozenLake/action_is_effective 0.00156
+[36m(TaskRunner pid=1022958)[0m wandb:                train/FrozenLake/action_is_valid 0.00156
+[36m(TaskRunner pid=1022958)[0m wandb:   train/FrozenLake/non-zero/action_is_effective 0.2
+[36m(TaskRunner pid=1022958)[0m wandb:       train/FrozenLake/non-zero/action_is_valid 0.2
+[36m(TaskRunner pid=1022958)[0m wandb:           train/FrozenLake/non-zero/num_actions 2
+[36m(TaskRunner pid=1022958)[0m wandb:               train/FrozenLake/non-zero/success 1
+[36m(TaskRunner pid=1022958)[0m wandb:                    train/FrozenLake/num_actions 0
+[36m(TaskRunner pid=1022958)[0m wandb:                        train/FrozenLake/success 0
+[36m(TaskRunner pid=1022958)[0m wandb:                           train/response_length 1091.71094
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/best@128/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@128/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@16/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@16/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@2/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@2/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@32/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@32/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@4/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@4/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/best@64/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@64/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/best@8/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:               val-aux/unknown/reward/best@8/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:                  val-aux/unknown/reward/std@256 0
+[36m(TaskRunner pid=1022958)[0m wandb:           val-aux/unknown/reward/worst@128/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@128/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@16/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@16/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@2/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@2/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:           val-aux/unknown/reward/worst@256/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@32/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@32/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@4/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@4/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:            val-aux/unknown/reward/worst@64/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@64/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:             val-aux/unknown/reward/worst@8/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:              val-aux/unknown/reward/worst@8/std 0
+[36m(TaskRunner pid=1022958)[0m wandb:           val-core/unknown/reward/best@256/mean -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:                val-core/unknown/reward/mean@256 -0.5
+[36m(TaskRunner pid=1022958)[0m wandb:          val-env/FrozenLake/action_is_effective 0.15241
+[36m(TaskRunner pid=1022958)[0m wandb:              val-env/FrozenLake/action_is_valid 0.17695
+[36m(TaskRunner pid=1022958)[0m wandb: val-env/FrozenLake/non-zero/action_is_effective 0.6293
+[36m(TaskRunner pid=1022958)[0m wandb:     val-env/FrozenLake/non-zero/action_is_valid 0.65652
+[36m(TaskRunner pid=1022958)[0m wandb:         val-env/FrozenLake/non-zero/num_actions 3.37681
+[36m(TaskRunner pid=1022958)[0m wandb:             val-env/FrozenLake/non-zero/success 1
+[36m(TaskRunner pid=1022958)[0m wandb:                  val-env/FrozenLake/num_actions 0
+[36m(TaskRunner pid=1022958)[0m wandb:                      val-env/FrozenLake/success 0
+[36m(TaskRunner pid=1022958)[0m wandb:                         val-env/response_length 1060.86328
+[36m(TaskRunner pid=1022958)[0m wandb: 
+[36m(TaskRunner pid=1022958)[0m wandb: 🚀 View run ppo-basic-medium-batch_size_mini-low_kl at: https://wandb.ai/ounlp/frozen_lake/runs/8wefp40n
+[36m(TaskRunner pid=1022958)[0m wandb: ⭐️ View project at: https://wandb.ai/ounlp/frozen_lake
+[36m(TaskRunner pid=1022958)[0m wandb: Synced 5 W&B file(s), 21 media file(s), 42 artifact file(s) and 0 other file(s)
+[36m(TaskRunner pid=1022958)[0m wandb: Find logs at: ./wandb/run-20250613_181219-8wefp40n/logs

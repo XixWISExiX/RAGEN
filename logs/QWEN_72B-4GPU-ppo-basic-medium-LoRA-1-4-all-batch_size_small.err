@@ -1,0 +1,231 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_3_frozen_lake': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-19 10:38:12,966	INFO worker.py:1888 -- Started a local Ray instance.
+[36m(TaskRunner pid=700913)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=700913)[0m WARNING:2025-06-19 10:38:23,203:Waiting for register center actor X2kxJR_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:   3%|▎         | 1/37 [00:38<23:01, 38.37s/it]
+[36m(WorkerDict pid=702114)[0m Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s][32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:  16%|█▌        | 6/37 [00:51<03:14,  6.27s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:  43%|████▎     | 16/37 [01:16<01:22,  3.92s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Fetching 37 files:  49%|████▊     | 18/37 [01:21<01:08,  3.60s/it][32m [repeated 11x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:  62%|██████▏   | 23/37 [01:43<00:56,  4.03s/it]
+[36m(WorkerDict pid=702116)[0m Fetching 37 files:  62%|██████▏   | 23/37 [01:43<00:56,  4.03s/it]
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:  65%|██████▍   | 24/37 [02:01<01:15,  5.79s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Fetching 37 files:  92%|█████████▏| 34/37 [02:06<00:06,  2.14s/it]Fetching 37 files: 100%|██████████| 37/37 [02:06<00:00,  3.41s/it]
+[36m(WorkerDict pid=701806)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=701806)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:   0%|          | 0/37 [00:00<?, ?it/s]
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:   3%|▎         | 1/37 [00:03<01:49,  3.05s/it]
+[36m(WorkerDict pid=702114)[0m Fetching 37 files:  86%|████████▋ | 32/37 [02:04<00:12,  2.59s/it][32m [repeated 11x across cluster][0m
+[36m(WorkerDict pid=702114)[0m Fetching 37 files:  92%|█████████▏| 34/37 [02:06<00:06,  2.14s/it]Fetching 37 files: 100%|██████████| 37/37 [02:06<00:00,  3.41s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=702114)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=702114)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards:   0%|          | 0/37 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:   8%|▊         | 3/37 [00:09<01:46,  3.12s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  14%|█▎        | 5/37 [00:15<01:43,  3.23s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  19%|█▉        | 7/37 [00:22<01:36,  3.20s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  19%|█▉        | 7/37 [00:28<02:02,  4.08s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  30%|██▉       | 11/37 [00:35<01:23,  3.21s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  27%|██▋       | 10/37 [00:40<01:50,  4.08s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  41%|████      | 15/37 [00:48<01:10,  3.22s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  46%|████▌     | 17/37 [00:55<01:07,  3.39s/it][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  51%|█████▏    | 19/37 [01:02<01:00,  3.38s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=702115)[0m Loading checkpoint shards:  43%|████▎     | 16/37 [01:10<01:48,  5.15s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  59%|█████▉    | 22/37 [01:15<01:03,  4.22s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  62%|██████▏   | 23/37 [01:20<01:03,  4.51s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  65%|██████▍   | 24/37 [01:26<01:01,  4.76s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  68%|██████▊   | 25/37 [01:31<00:58,  4.84s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  57%|█████▋    | 21/37 [01:37<01:21,  5.09s/it][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  62%|██████▏   | 23/37 [01:45<01:04,  4.60s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  78%|███████▊  | 29/37 [01:52<00:42,  5.27s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  81%|████████  | 30/37 [01:57<00:37,  5.34s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  84%|████████▍ | 31/37 [02:02<00:31,  5.26s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  86%|████████▋ | 32/37 [02:08<00:26,  5.34s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  89%|████████▉ | 33/37 [02:13<00:21,  5.27s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  92%|█████████▏| 34/37 [02:19<00:15,  5.32s/it]
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards:  81%|████████  | 30/37 [02:15<00:29,  4.21s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards:  86%|████████▋ | 32/37 [02:24<00:20,  4.18s/it][32m [repeated 6x across cluster][0m
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  95%|█████████▍| 35/37 [02:24<00:10,  5.29s/it]
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards:  97%|█████████▋| 36/37 [02:29<00:05,  5.26s/it]
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards:  89%|████████▉ | 33/37 [02:28<00:16,  4.20s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  92%|█████████▏| 34/37 [02:32<00:12,  4.17s/it]
+[36m(WorkerDict pid=701806)[0m Loading checkpoint shards: 100%|██████████| 37/37 [02:33<00:00,  5.03s/it]Loading checkpoint shards: 100%|██████████| 37/37 [02:33<00:00,  4.16s/it]
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards:  97%|█████████▋| 36/37 [02:39<00:03,  3.99s/it][32m [repeated 6x across cluster][0m
+[36m(WorkerDict pid=702116)[0m Loading checkpoint shards: 100%|██████████| 37/37 [02:44<00:00,  4.06s/it]Loading checkpoint shards: 100%|██████████| 37/37 [02:44<00:00,  4.43s/it]
+[36m(TaskRunner pid=700913)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.critic_init_model()[39m (pid=702115, ip=10.255.0.11, actor_id=25dd0440bcd6b0776af406ae01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f56fa6ca4e0>)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+[36m(TaskRunner pid=700913)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+[36m(TaskRunner pid=700913)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 1044, in init_model
+[36m(TaskRunner pid=700913)[0m     self.critic_module, self.critic_optimizer, self.critic_lr_scheduler = self._build_critic_model_optimizer(self.config)
+[36m(TaskRunner pid=700913)[0m                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 974, in _build_critic_model_optimizer
+[36m(TaskRunner pid=700913)[0m     critic_module = FSDP(
+[36m(TaskRunner pid=700913)[0m                     ^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[36m(TaskRunner pid=700913)[0m     _init_param_handle_from_module(
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 589, in _init_param_handle_from_module
+[36m(TaskRunner pid=700913)[0m     _materialize_with_param_init_fn(
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 898, in _materialize_with_param_init_fn
+[36m(TaskRunner pid=700913)[0m     param_init_fn(module)
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/utils/fsdp_utils.py", line 43, in init_fn
+[36m(TaskRunner pid=700913)[0m     x = x.to_empty(device=torch.cuda.current_device(), recurse=False)
+[36m(TaskRunner pid=700913)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1195, in to_empty
+[36m(TaskRunner pid=700913)[0m     return self._apply(
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+[36m(TaskRunner pid=700913)[0m     param_applied = fn(param)
+[36m(TaskRunner pid=700913)[0m                     ^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1196, in <lambda>
+[36m(TaskRunner pid=700913)[0m     lambda t: torch.empty_like(t, device=device), recurse=recurse
+[36m(TaskRunner pid=700913)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_prims_common/wrappers.py", line 291, in _fn
+[36m(TaskRunner pid=700913)[0m     result = fn(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m              ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_refs/__init__.py", line 5003, in empty_like
+[36m(TaskRunner pid=700913)[0m     return torch.empty_permuted(
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 924.00 MiB. GPU 0 has a total capacity of 44.52 GiB of which 345.69 MiB is free. Including non-PyTorch memory, this process has 44.17 GiB memory in use. Of the allocated memory 43.46 GiB is allocated by PyTorch, and 1.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards:  97%|█████████▋| 36/37 [02:40<00:04,  4.03s/it][32m [repeated 2x across cluster][0m
+Error executing job with overrides: ['trainer.project_name=frozen_lake', 'system.CUDA_VISIBLE_DEVICES="0,1,2,3"', 'trainer.experiment_name=QWEN_72B-4GPU-ppo-basic-medium-LoRA-1-4-all-batch_size_small', 'algorithm.adv_estimator=gae', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=1', 'actor_rollout_ref.rollout.max_model_len=4096', 'actor_rollout_ref.rollout.response_length=256', 'lora.rank=1', 'lora.alpha=4', 'lora.target_modules=all-linear', 'micro_batch_size_per_gpu=2', 'ppo_mini_batch_size=8', 'model_path=Qwen/Qwen2.5-72B-Instruct', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.75', 'trainer.n_gpus_per_node=4', 'actor_rollout_ref.rollout.tensor_model_parallel_size=4']
+Traceback (most recent call last):
+  File "/scr/jwiseman/RAGEN/train.py", line 302, in <module>
+    main()
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 158, in main
+    run_ppo(config)
+  File "/scr/jwiseman/RAGEN/train.py", line 179, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 2822, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 930, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=700913, ip=10.255.0.11, actor_id=2fd47aceef3e7803376b84b601000000, repr=<train.TaskRunner object at 0x7f621ce65760>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 296, in run
+    trainer.init_workers()
+  File "/scr/jwiseman/RAGEN/ragen/trainer/agent_trainer.py", line 360, in init_workers
+    self.critic_wg.init_model()
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 49, in func
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.critic_init_model()[39m (pid=702116, ip=10.255.0.11, actor_id=9de748b8e9d6eff4d4dbde0b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7f5b4505a0f0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 1044, in init_model
+    self.critic_module, self.critic_optimizer, self.critic_lr_scheduler = self._build_critic_model_optimizer(self.config)
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 974, in _build_critic_model_optimizer
+    critic_module = FSDP(
+                    ^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+    _init_param_handle_from_module(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 589, in _init_param_handle_from_module
+    _materialize_with_param_init_fn(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 898, in _materialize_with_param_init_fn
+    param_init_fn(module)
+  File "/scr/jwiseman/RAGEN/verl/verl/utils/fsdp_utils.py", line 43, in init_fn
+    x = x.to_empty(device=torch.cuda.current_device(), recurse=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1195, in to_empty
+    return self._apply(
+           ^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1196, in <lambda>
+    lambda t: torch.empty_like(t, device=device), recurse=recurse
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_prims_common/wrappers.py", line 291, in _fn
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_refs/__init__.py", line 5003, in empty_like
+    return torch.empty_permuted(
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 924.00 MiB. GPU 0 has a total capacity of 44.52 GiB of which 385.69 MiB is free. Including non-PyTorch memory, this process has 44.13 GiB memory in use. Of the allocated memory 43.46 GiB is allocated by PyTorch, and 1.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(TaskRunner pid=700913)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.critic_init_model()[39m (pid=702114, ip=10.255.0.11, actor_id=3c95c535459401f4afebbf9501000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x7efa77f42240>)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/ray/base.py", line 459, in func
+[36m(TaskRunner pid=700913)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/single_controller/base/decorator.py", line 465, in inner
+[36m(TaskRunner pid=700913)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 1044, in init_model
+[36m(TaskRunner pid=700913)[0m     self.critic_module, self.critic_optimizer, self.critic_lr_scheduler = self._build_critic_model_optimizer(self.config)
+[36m(TaskRunner pid=700913)[0m                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/ragen/workers/fsdp_workers.py", line 974, in _build_critic_model_optimizer
+[36m(TaskRunner pid=700913)[0m     critic_module = FSDP(
+[36m(TaskRunner pid=700913)[0m                     ^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 509, in __init__
+[36m(TaskRunner pid=700913)[0m     _init_param_handle_from_module(
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 589, in _init_param_handle_from_module
+[36m(TaskRunner pid=700913)[0m     _materialize_with_param_init_fn(
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/_init_utils.py", line 898, in _materialize_with_param_init_fn
+[36m(TaskRunner pid=700913)[0m     param_init_fn(module)
+[36m(TaskRunner pid=700913)[0m   File "/scr/jwiseman/RAGEN/verl/verl/utils/fsdp_utils.py", line 43, in init_fn
+[36m(TaskRunner pid=700913)[0m     x = x.to_empty(device=torch.cuda.current_device(), recurse=False)
+[36m(TaskRunner pid=700913)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1195, in to_empty
+[36m(TaskRunner pid=700913)[0m     return self._apply(
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+[36m(TaskRunner pid=700913)[0m     param_applied = fn(param)
+[36m(TaskRunner pid=700913)[0m                     ^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1196, in <lambda>
+[36m(TaskRunner pid=700913)[0m     lambda t: torch.empty_like(t, device=device), recurse=recurse
+[36m(TaskRunner pid=700913)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_prims_common/wrappers.py", line 291, in _fn
+[36m(TaskRunner pid=700913)[0m     result = fn(*args, **kwargs)
+[36m(TaskRunner pid=700913)[0m              ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m   File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/_refs/__init__.py", line 5003, in empty_like
+[36m(TaskRunner pid=700913)[0m     return torch.empty_permuted(
+[36m(TaskRunner pid=700913)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=700913)[0m torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 924.00 MiB. GPU 0 has a total capacity of 44.52 GiB of which 345.69 MiB is free. Including non-PyTorch memory, this process has 44.17 GiB memory in use. Of the allocated memory 43.46 GiB is allocated by PyTorch, and 1.95 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(WorkerDict pid=702114)[0m Loading checkpoint shards: 100%|██████████| 37/37 [02:44<00:00,  4.11s/it]Loading checkpoint shards: 100%|██████████| 37/37 [02:44<00:00,  4.45s/it][32m [repeated 2x across cluster][0m

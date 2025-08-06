@@ -1,0 +1,35 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_3_frozen_lake': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+Error executing job with overrides: ['trainer.project_name=frozen_lake', 'system.CUDA_VISIBLE_DEVICES="1"', 'trainer.experiment_name=ppo-basic-mini-batch_size_mini-no_filter', 'algorithm.adv_estimator=gae', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=1', 'actor_rollout_ref.rollout.max_model_len=1024', 'actor_rollout_ref.rollout.response_length=128', 'micro_batch_size_per_gpu=1', 'ppo_mini_batch_size=4', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=0']
+Traceback (most recent call last):
+  File "/scr/jwiseman/RAGEN/train.py", line 302, in <module>
+    main()
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 155, in main
+    config = add_dependency_and_validate_config(config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 140, in add_dependency_and_validate_config
+    assert config.es_manager.train.env_groups * config.es_manager.train.group_size * config.actor_rollout_ref.rollout.rollout_filter_ratio >= config.ppo_mini_batch_size, \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env_groups * group_size * rollout_filter_ratio (0) must be greater than or equal to ppo_mini_batch_size (4). Note that effective rollouts for update is env_groups * group_size * rollout_filter_ratio.

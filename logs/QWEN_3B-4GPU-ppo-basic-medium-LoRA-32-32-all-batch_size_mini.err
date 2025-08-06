@@ -1,0 +1,81 @@
+/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In '_6_webshop.yaml': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+2025-06-20 12:33:36,358	INFO worker.py:1888 -- Started a local Ray instance.
+[36m(TaskRunner pid=1363315)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1363315)[0m WARNING:2025-06-20 12:33:45,751:Waiting for register center actor bzjIiW_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(WorkerDict pid=1364401)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1364401)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[36m(WorkerDict pid=1364401)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1364401)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.22s/it]
+[36m(WorkerDict pid=1364401)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.48s/it]
+[36m(WorkerDict pid=1364400)[0m Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=1364400)[0m You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=1364095)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=1364095)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.26s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=1364095)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.51s/it][32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=1364401)[0m Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=1364095)[0m Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.26s/it][32m [repeated 4x across cluster][0m
+Error executing job with overrides: ['trainer.project_name=webshop', 'system.CUDA_VISIBLE_DEVICES="0,1,2,3"', 'trainer.experiment_name=QWEN_3B-4GPU-ppo-basic-medium-LoRA-32-32-all-batch_size_mini', 'algorithm.adv_estimator=gae', 'algorithm.kl_ctrl.kl_coef=0.001', 'actor_rollout_ref.actor.kl_loss_coef=0.001', 'actor_rollout_ref.actor.clip_ratio_high=0.2', 'actor_rollout_ref.rollout.rollout_filter_ratio=1', 'actor_rollout_ref.rollout.max_model_len=4096', 'actor_rollout_ref.rollout.response_length=256', 'lora.rank=32', 'lora.alpha=32', 'lora.target_modules=all-linear', 'micro_batch_size_per_gpu=1', 'ppo_mini_batch_size=4', 'model_path=Qwen/Qwen2.5-3B-Instruct', 'actor_rollout_ref.rollout.gpu_memory_utilization=0.75', 'trainer.n_gpus_per_node=4', 'actor_rollout_ref.rollout.tensor_model_parallel_size=4']
+Traceback (most recent call last):
+  File "/scr/jwiseman/RAGEN/train.py", line 302, in <module>
+    main()
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 158, in main
+    run_ppo(config)
+  File "/scr/jwiseman/RAGEN/train.py", line 179, in run_ppo
+    ray.get(runner.run.remote(config))
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 2822, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/ray/_private/worker.py", line 930, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ValueError): [36mray::TaskRunner.run()[39m (pid=1363315, ip=10.255.0.11, actor_id=88a32f114571871aad9d88cf01000000, repr=<train.TaskRunner object at 0x7f9a05875880>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/train.py", line 297, in run
+    trainer.init_agent_proxy()
+  File "/scr/jwiseman/RAGEN/ragen/trainer/agent_trainer.py", line 184, in init_agent_proxy
+    self.agent_proxy = LLMAgentProxy(
+                       ^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/llm_agent/agent_proxy.py", line 121, in __init__
+    self.train_ctx_manager = ContextManager(config, tokenizer, mode="train")
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scr/jwiseman/RAGEN/ragen/llm_agent/ctx_manager.py", line 101, in __init__
+    self._init_prefix_lookup()
+  File "/scr/jwiseman/RAGEN/ragen/llm_agent/ctx_manager.py", line 116, in _init_prefix_lookup
+    self._check_env_installed(env_config.env_type)
+  File "/scr/jwiseman/RAGEN/ragen/llm_agent/ctx_manager.py", line 105, in _check_env_installed
+    raise ValueError(f"Environment {env_type} is not installed. Please install it using the scripts/setup_{env_type}.sh script.")
+ValueError: Environment webshop is not installed. Please install it using the scripts/setup_webshop.sh script.
+[36m(WorkerDict pid=1364095)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1364095)[0m   warnings.warn(
+[36m(WorkerDict pid=1364095)[0m Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.37s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.50s/it][32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=1364400)[0m /home/student/jwiseman/.conda/envs/ragen/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:690: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=1364400)[0m   warnings.warn([32m [repeated 3x across cluster][0m
