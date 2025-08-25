@@ -351,9 +351,7 @@ We thank the [DeepSeek](https://github.com/deepseek-ai/DeepSeek-R1) team for pro
 
 ## Star History
 
-<p align="center" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px; max-width: 500px; margin: 0 auto;">
-    <img src="public/star-history-202556.png" alt="" />
-</p>
+[![Star History Chart](https://api.star-history.com/svg?repos=ragen-ai/ragen&type=Date)](https://www.star-history.com/#ragen-ai/ragen&Date)
 
 ## Citation
 If you find RAGEN useful, we would appreciate it if you consider citing our work:
